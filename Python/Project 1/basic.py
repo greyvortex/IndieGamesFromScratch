@@ -5,10 +5,10 @@ import sys
 pygame.init()
 
 # Constants
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 800
 GRAVITY = 0.8
-JUMP_STRENGTH = -15
+JUMP_STRENGTH = -20
 PLAYER_SPEED = 5
 
 # Colors
@@ -86,6 +86,7 @@ class Player:
         pygame.draw.circle(screen, WHITE, (self.rect.x + 8, self.rect.y + 10), 3)
         pygame.draw.circle(screen, WHITE, (self.rect.x + 22, self.rect.y + 10), 3)
 
+
 class Platform:
     def __init__(self, x, y, width, height, color=BROWN):
         self.rect = pygame.Rect(x, y, width, height)
@@ -93,6 +94,7 @@ class Platform:
     
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
+
 
 class Game:
     def __init__(self):
